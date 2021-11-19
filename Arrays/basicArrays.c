@@ -1,6 +1,6 @@
 // Name: Alyssa Comstock
 // Date Created: 10/16/2021
-// Date Updated: 10/16/2021
+// Date Updated: 11/19/2021
 // Description:  Contains arrays and the methods to manipulate arrays.
 
 #include <stdio.h>
@@ -15,9 +15,7 @@ int main(){
     // array methods: 
     // - Display entire array
     // - reversing the array
-    // - Insert at index
-    // - Delete at index
-    // - Update element at index
+
     int tempArr[5] = {0,1,2,3,4};
     int newElement;
     int newIndex=0;
@@ -32,28 +30,6 @@ int main(){
     int rvArr[5];
     reverseArray(tempArr, rvArr, arrLen);
     displayArray(rvArr, arrLen);
-
-    // inserting in to the original array
-    printf("\n\nElement to add: ");
-    scanf("%d", &newElement);
-    do{
-        printf("New index: ");
-        scanf("%d", &newIndex);
-        if(newIndex > arrLen){
-            printf("Index too big try again\n");
-        }
-    }while(newIndex > arrLen);
-
-    // todo: insert
-
-
-
-    // todo: delete at index
-
-
-
-    // todo: update element at index
-
 
     return 0;
 }
@@ -83,6 +59,6 @@ int * reverseArray(int * arr, int * rvArr, int size){
         j++;
     }
 
-    return * rvArr;
+    return *rvArr;
 }
 
